@@ -208,6 +208,9 @@ let java_allow_cpp_keywords = 1
 " System default for mappings is now the "," character
 let mapleader = ","
 
+" Crtlp should always sit on the working directory
+let g:ctrlp_working_path_mode = 0  
+
 " Wipe out all buffers
 nmap <silent> ,wa :1,9000bwipeout<cr>
 
@@ -270,14 +273,15 @@ noremap <silent> ,ch :wincmd h<CR>:close<CR>
 noremap <silent> ,cl :wincmd l<CR>:close<CR>
 noremap <silent> ,cc :close<CR>
 noremap <silent> ,cw :cclose<CR>
-noremap <silent> ,ml <C-W>L
-noremap <silent> ,mk <C-W>K
-noremap <silent> ,mh <C-W>H
-noremap <silent> ,mj <C-W>J
+noremap <silent> ,l <C-W>L
+noremap <silent> ,k <C-W>K
+noremap <silent> ,h <C-W>H
+noremap <silent> ,j <C-W>J
 noremap <silent> <C-7> <C-W>>
 noremap <silent> <C-8> <C-W>+
 noremap <silent> <C-9> <C-W>+
 noremap <silent> <C-0> <C-W>>
+nnoremap ; :
 
 " Edit the vimrc file
 nmap <silent> ,ev :e $MYVIMRC<CR>
@@ -324,6 +328,9 @@ imap jj <esc>
 
 " I like jj - Let's try something else fun
 imap ,fn <c-r>=expand('%:t:r')<cr>
+
+" crtlp buffer directly
+nmap ,b <C-P><C-F>   
 
 " Clear the text using a motion / text object and then move the character to the
 " next word
@@ -511,6 +518,7 @@ nmap <silent> ,ff :FufFile<cr>
 nmap <silent> ,fc :FufMruCmd<cr>
 nmap <silent> ,fm :FufMruFile<cr>
 nmap <silent> ,fp :FufFile ~/git/*<cr>
+nmap <silent> ,fa :FufFile **/<CR>
 
 "-----------------------------------------------------------------------------
 " Gundo Settings
