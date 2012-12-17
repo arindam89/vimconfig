@@ -13,10 +13,6 @@
 call pathogen#infect()
 
 
-"Fuzzy Finder
-"
-map ,f :FufFile **/<CR>
-
 " Add xptemplate global personal directory value
 if has("unix")
   set runtimepath+=~/.vim/xpt-personal
@@ -282,6 +278,8 @@ noremap <silent> <C-8> <C-W>+
 noremap <silent> <C-9> <C-W>+
 noremap <silent> <C-0> <C-W>>
 nnoremap ; :
+nnoremap j gj
+nnoremap k gk
 
 " Edit the vimrc file
 nmap <silent> ,ev :e $MYVIMRC<CR>
