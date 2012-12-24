@@ -564,23 +564,23 @@ function! IndentToNextBraceInLineAbove()
     :normal j"vPl
 endfunction
 
-nmap <silent> ,ii :call IndentToNextBraceInLineAbove()<cr>
-
-nmap <silent> ,mba :call MarkBufferInJumpList(expand('%:p'), 'a')<cr>
-nmap <silent> ,mbb :call MarkBufferInJumpList(expand('%:p'), 'b')<cr>
-nmap <silent> ,mbc :call MarkBufferInJumpList(expand('%:p'), 'c')<cr>
-nmap <silent> ,mbd :call MarkBufferInJumpList(expand('%:p'), 'd')<cr>
-nmap <silent> ,mbe :call MarkBufferInJumpList(expand('%:p'), 'e')<cr>
-nmap <silent> ,mbf :call MarkBufferInJumpList(expand('%:p'), 'f')<cr>
-nmap <silent> ,mbg :call MarkBufferInJumpList(expand('%:p'), 'g')<cr>
-nmap <silent> ,jba :call JumpToBufferInJumpList('a')<cr>
-nmap <silent> ,jbb :call JumpToBufferInJumpList('b')<cr>
-nmap <silent> ,jbc :call JumpToBufferInJumpList('c')<cr>
-nmap <silent> ,jbd :call JumpToBufferInJumpList('d')<cr>
-nmap <silent> ,jbe :call JumpToBufferInJumpList('e')<cr>
-nmap <silent> ,jbf :call JumpToBufferInJumpList('f')<cr>
-nmap <silent> ,jbg :call JumpToBufferInJumpList('g')<cr>
-nmap <silent> ,ljb :call ListJumpToBuffers()<cr>
+"nmap <silent> ,ii :call IndentToNextBraceInLineAbove()<cr>
+"
+"nmap <silent> ,mba :call MarkBufferInJumpList(expand('%:p'), 'a')<cr>
+"nmap <silent> ,mbb :call MarkBufferInJumpList(expand('%:p'), 'b')<cr>
+"nmap <silent> ,mbc :call MarkBufferInJumpList(expand('%:p'), 'c')<cr>
+"nmap <silent> ,mbd :call MarkBufferInJumpList(expand('%:p'), 'd')<cr>
+"nmap <silent> ,mbe :call MarkBufferInJumpList(expand('%:p'), 'e')<cr>
+"nmap <silent> ,mbf :call MarkBufferInJumpList(expand('%:p'), 'f')<cr>
+"nmap <silent> ,mbg :call MarkBufferInJumpList(expand('%:p'), 'g')<cr>
+"nmap <silent> ,jba :call JumpToBufferInJumpList('a')<cr>
+"nmap <silent> ,jbb :call JumpToBufferInJumpList('b')<cr>
+"nmap <silent> ,jbc :call JumpToBufferInJumpList('c')<cr>
+"nmap <silent> ,jbd :call JumpToBufferInJumpList('d')<cr>
+"nmap <silent> ,jbe :call JumpToBufferInJumpList('e')<cr>
+"nmap <silent> ,jbf :call JumpToBufferInJumpList('f')<cr>
+"nmap <silent> ,jbg :call JumpToBufferInJumpList('g')<cr>
+"nmap <silent> ,ljb :call ListJumpToBuffers()<cr>
 
 function! DiffCurrentFileAgainstAnother(snipoff, replacewith)
     let currentFile = expand('%:p')
@@ -801,5 +801,12 @@ syntax enable
 set background=dark
 colorscheme solarized
 
-set gfn=Inconsolata:h14
+set gfn=Inconsolata:h16
 nohls
+
+
+"Set the mini buffer explorer to <C-Tab> and <C-S-Tab>
+let g:miniBufExplMapCTabSwitchBufs = 1
+
+"Set the shortcut for redo
+nnoremap r <c-r>
