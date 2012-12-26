@@ -807,6 +807,14 @@ nohls
 
 "Set the mini buffer explorer to <C-Tab> and <C-S-Tab>
 let g:miniBufExplMapCTabSwitchBufs = 1
+map <Leader>t :TMiniBufExplorer<cr>
+map <Leader>b :MiniBufExplorer<cr>
+" Open MBE automatically only when the buffer count is more than 10 
+let g:miniBufExplorerMoreThanOne=10
+" Open the buffer in single click of mouse
+let g:miniBufExplUseSingleClick = 1
+
 
 "Set the shortcut for redo
-nnoremap r <c-r>
+nnoremap <F2> <c-r>
+
