@@ -115,8 +115,6 @@ set timeoutlen=500
 " Keep some stuff in the history
 set history=100
 
-" These commands open folds
-set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
 
 " When the page starts to scroll, keep the cursor 8 lines from the top and 8
 " lines from the bottom
@@ -804,17 +802,29 @@ colorscheme solarized
 set gfn=Inconsolata:h16
 nohls
 
+"" I no longer use Mini Buffer explorer , CrtlP is super awesome :)
 
 "Set the mini buffer explorer to <C-Tab> and <C-S-Tab>
-let g:miniBufExplMapCTabSwitchBufs = 1
-map <Leader>t :TMiniBufExplorer<cr>
-map <Leader>b :MiniBufExplorer<cr>
+"let g:miniBufExplMapCTabSwitchBufs = 1
+"map <Leader>t :TMiniBufExplorer<cr>
 " Open MBE automatically only when the buffer count is more than 10 
-let g:miniBufExplorerMoreThanOne=10
+"let g:miniBufExplorerMoreThanOne=10
 " Open the buffer in single click of mouse
-let g:miniBufExplUseSingleClick = 1
+"let g:miniBufExplUseSingleClick = 1
 
+
+"Buffer Management all by myself
+"map <Leader>b :ls<CR>:b<space>
+map <Leader>b :CtrlPBuffer<CR>
+map <Leader><Leader> :b#<CR>
 
 "Set the shortcut for redo
 nnoremap <F2> <c-r>
 
+
+" These commands open folds
+set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=1
