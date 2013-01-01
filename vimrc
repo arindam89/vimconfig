@@ -799,7 +799,7 @@ syntax enable
 set background=dark
 colorscheme solarized
 
-set gfn=Inconsolata:h16
+set gfn=Inconsolata:h18
 nohls
 
 "" I no longer use Mini Buffer explorer , CrtlP is super awesome :)
