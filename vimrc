@@ -279,6 +279,10 @@ nnoremap ; :
 nnoremap j gj
 nnoremap k gk
 
+" zen coding
+let g:user_zen_expandabbr_key = '<c-e>'
+let g:use_zen_complete_tag = 1
+
 " Edit the vimrc file
 nmap <silent> ,ev :e $MYVIMRC<CR>
 nmap <silent> ,sv :so $MYVIMRC<CR>
@@ -431,23 +435,6 @@ command! MyChanges :PF changes -u dwyatt -m -l <args>
 set path=
 set tags=
 
-"-----------------------------------------------------------------------------
-" NERD Tree Plugin Settings
-"-----------------------------------------------------------------------------
-" Toggle the NERD Tree on an off with F7
-nmap <F7> :NERDTreeTabsToggle<CR>
-
-" Close the NERD Tree with Shift-F7
-nmap <S-F7> :NERDTreeMirrorToggle<CR>
-
-" Show the bookmarks table on startup
-let NERDTreeShowBookmarks=1
-
-" Don't display these kinds of files
-let NERDTreeIgnore=[ '\.ncb$', '\.suo$', '\.vcproj\.RIMNET', '\.obj$',
-                   \ '\.ilk$', '^BuildLog.htm$', '\.pdb$', '\.idb$',
-                   \ '\.embed\.manifest$', '\.embed\.manifest.res$',
-                   \ '\.intermediate\.manifest$', '^mt.dep$' ]
 
 "-----------------------------------------------------------------------------
 " GPG Stuff
@@ -784,7 +771,6 @@ if has("gui_running")
   else
     set background=dark
   endif
-  colorscheme solarized
   if !exists("g:vimrcloaded")
       winpos 0 0
       if !&diff
@@ -799,7 +785,7 @@ syntax enable
 set background=dark
 colorscheme solarized
 
-set gfn=Inconsolata:h18
+set gfn=Inconsolata:h15
 nohls
 
 "" I no longer use Mini Buffer explorer , CrtlP is super awesome :)
